@@ -1,5 +1,5 @@
 import speech_recognition as sr
-from playsound import playsound # playsound hata verdigi icin powershel'i yonetici olarak baslatip kaldırıp tekrar yuklenmesi gerekebilir.
+from playsound import playsound #playsound hata verirse powershel'i yonetici olarak baslattıktan sonra kaldırıp tekrar yuklenmesi gerekebilir.
 from gtts import gTTS
 import os
 
