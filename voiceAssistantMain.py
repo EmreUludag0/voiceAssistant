@@ -18,9 +18,9 @@ def dinleme(a=False):
         try: 
             ses = kayit.recognize_google(mikrofon, language = "tr-TR")
         except sr.UnknownValueError:
-            print("Asistan: Anlayamadim")
+            print("Asistan: anlasilmadi")
         except sr.RequestError:
-            print("Asistan: Sistem şu anda çalismiyo")
+            print("Asistan: Hata")
         
         return ses
 
