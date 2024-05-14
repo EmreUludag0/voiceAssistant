@@ -30,23 +30,44 @@ def talking(metin):
     tts = gTTS(text = metin, lang="tr", slow=False)
     voice = "konusma.mp3"
     tts.save(voice)
+    #playsound(voice)
     playsound(voice)
     os.remove(voice)
+    
+def answer(voice):
+    if "merhaba" in voice:
+        talking("Size de merhaba")
+        
 
-talking("sizin için ne yapabilirim?")
-print("konusun")
+talking("Sizin için ne yapabilirim?")
+print("Konusun")
 
+
+
+while True:
+    voice = listening()
+    
+    if bool(voice) == True:
+        print(voice)
+        voice = voice.lower()
+        talking(answer(voice))
+        #answer(voice)
+        #os.remove(voice)
+
+
+""""" #while döndusunun ustunde yer alir
 
 voice = listening()
 talking(voice)
 print(voice)
 os.remove(voice)
 
+"""""
 
 """""
-def yanit(ses):
+def answer(voice):
     if "merhaba" in ses:
-        konusma("size de merhaba")
+        talking("size de merhaba")
 
         
 
